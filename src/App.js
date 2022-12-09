@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Profile from "./props/Profile";
 
 function App() {
+const data = {
+FullName: "Beyonce Knowles" , 
+Bio: "she's an american song writter , singer , actors , producer she is marring to Jay-z and tey have 3 kids " ,
+pro: "Singin and Dancing",
+};
+
+const handleName=(x)=>alert(x);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+<Profile  data={data} handleName={handleName} >
+<img src="beyonce.jpg" width={500} />
+</Profile>
     </div>
   );
 }
